@@ -1,0 +1,2 @@
+### oAI Stock Decoder - Apex Framework
+Apex classes and helper flow to correspond with the blog post https://open.substack.com/pub/ilyapinchuk/p/build-an-apex-framework-for-openai?r=5dh9eu&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true

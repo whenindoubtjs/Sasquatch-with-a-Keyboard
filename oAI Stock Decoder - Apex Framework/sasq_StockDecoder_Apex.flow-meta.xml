@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Decode_Legacy_Data</name>
+        <label>Decode Legacy Data</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <actionName>InvocableStockDecoder</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>inputListOfIds</name>
+            <value>
+                <elementReference>ids</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>InvocableStockDecoder</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>StockDecoder - Apex {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>StockDecoder - Apex</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decode_Legacy_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
