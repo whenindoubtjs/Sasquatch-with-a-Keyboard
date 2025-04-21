@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Org Release Version
+        </h3>
+        <lightning-layout horizontal-align="center">
+            <template if:false={apiResponse}>
+                <lightning-layout-item size="12" padding="around-small">
+                    <p class="slds-p-horizontal_small">Click the button to display the current org version</p>
+                    <lightning-button label="Fetch Org Version" onclick={fetchOrgVersion}></lightning-button>
+                </lightning-layout-item>
+            </template>
+            <template if:true={apiResponse}>
+                <lightning-layout-item size="12" padding="around-small">
+                    <p class="slds-p-horizontal_small">This org is on {apiResponse.label} Release, correlating to API Version {apiResponse.version}</p>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+</template>
